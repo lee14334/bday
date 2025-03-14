@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='mainpage.css') }}">
+    <link rel="stylesheet" href="/static/mainpage.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1/dist/confetti.browser.min.js"></script>
 
@@ -72,8 +72,8 @@ i
     </script>
 </head>
 <body>
-    <audio id="waiting-song" src="{{ url_for('static', filename='waiting.mp3') }}" autoplay loop></audio>
-    <audio id="birthday-song" src="{{ url_for('static', filename='finally.mp3') }}" autoplay loop></audio>
+    <audio id="waiting-song" src="/static/waiting.mp3" autoplay loop></audio>
+    <audio id="birthday-song" src="/static/finally.mp3" autoplay loop></audio>
 
     <div class="birthday-container">
         <div class = "birthday-back">
@@ -86,7 +86,7 @@ i
         <!-- Hidden cake container -->
         <div id="cake-container" style="display: none; text-align: center;">
             <h2>Blow the candles out!!!</h2>
-            <img src="{{ url_for('static', filename='cake.gif') }}" alt="Birthday Cake" id="birthday-cake" style="width: 300px; cursor: pointer;" onclick="showBirthdayMessage()">
+            <img src="/static/cake.gif" alt="Birthday Cake" id="birthday-cake" style="width: 300px; cursor: pointer;" onclick="showBirthdayMessage()">
         </div>
 
         <!-- Hidden birthday container -->
