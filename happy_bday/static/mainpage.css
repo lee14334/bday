@@ -1,0 +1,106 @@
+.archivo-black-regular {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+  }
+
+body {
+    font-family: 'Archivo Black';
+    text-align: center;
+    background: url('balloons.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Ensures full viewport height */
+    margin: 0;
+}
+
+.birthday-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    width: 100%;
+    text-align: center;
+}
+
+.birthday-back {
+    background: rgba(139, 240, 255, 0.6);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    padding: 30px; /* Add spacing around text */
+    border-radius: 15px; /* Round edges */
+    display: inline-block; /* Ensures it only takes necessary space */
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    animation: glow 1.5s infinite alternate;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fdaaf6;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #62fa76, 0 0 20px #62fa76; }
+    100% { text-shadow: 0 0 20px #fdaaf6, 0 0 30px #fdaaf6; }
+}
+
+p {
+    font-size: 1.5em;
+}
+
+button {
+    background-color: #fdaaf6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Archivo Black';
+    font-size: 1.2em;
+    font-weight: 50;
+    color: #62fa76;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: white;
+}
+
+.surprise-message {
+    display: none;
+    font-size: 2em;
+    margin-top: 20px;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Fullscreen text effect */
+#fullscreen-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 5px 5px 20px #62fa76, 5px 5px 30px #fdaaf6;
+    display: none;
+    z-index: 999;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Ensure hidden elements stay hidden */
+.hidden {
+    display: none;
+}
